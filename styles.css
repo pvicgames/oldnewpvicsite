@@ -1,12 +1,12 @@
 /* Carregar fontes. ------------------ */
 @font-face {
     font-family: "AdLib";
-    src: url("/fonts/adlib.ttf");
+    src: url("fonts/adlib.ttf");
 }
 
 @font-face {
     font-family: "Helvetica";
-    src: url("/fonts/helvetica.ttf");
+    src: url("fonts/helvetica.ttf");
 }
 
 /* ----------------------------------- */
