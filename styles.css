@@ -96,4 +96,15 @@ body {
         height: 100vh;
     }
 }
+
+/* Justify */
+.justify-text {
+    text-align: justify;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    word-break: break-word;
+    hyphens: auto;
+}
 /* ----------------------------------- */
