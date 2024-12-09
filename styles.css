@@ -142,9 +142,10 @@ body {
     transform: translateY(-11px);
 }
 
-.navebar-desktop .nav-button p {
+.navebar-desktop .nav-button a {
     font-family: "AdLib";
     font-size: 30px;
+    text-decoration: none;
 }
 
 .navebar-desktop .nav-button-active {
@@ -159,7 +160,7 @@ body {
     padding-right: 10px;
 }
 
-.navebar-desktop .nav-button-active p {
+.navebar-desktop .nav-button-active a { /* Mobile */
     font-family: "AdLib";
     font-size: 40px;
 }
@@ -173,5 +174,7 @@ body {
 .navmobile a{
     font-weight: normal !important;
     text-align: right;
+    color: #e8e8e8;
+    text-decoration: none;
 }
 /* ----------------------------------- */
