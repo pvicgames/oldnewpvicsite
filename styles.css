@@ -12,33 +12,17 @@
 /* ----------------------------------- */
 
 /* Cores. ---------------------------- */
-.color-criatividade {
-    color: #e44c78;
-}
-
-.color-alegria {
-    color: #ffd343;
-}
-
-.color-pureza {
-    color: #94dc52;
-}
-
-.color-imaginacao {
-    color: #3c89d7;
-}
+.color-criatividade {color: #e44c78;}
+.color-alegria {color: #ffd343;}
+.color-pureza {color: #94dc52;}
+.color-imaginacao {color: #3c89d7;}
 
 /* ----------------------------------- */
 
 /* Classes genéricas ----------------- */
 /* Fontes */
-h1 {
-    font-family: "AdLib"
-}
-
-p {
-    font-family: "Helvetica";
-}
+h1 {font-family: "AdLib"}
+p {font-family: "Helvetica";}
 
 /* Links*/
 a:link {
@@ -106,5 +90,87 @@ body {
     -o-hyphens: auto;
     word-break: break-word;
     hyphens: auto;
+}
+/* ----------------------------------- */
+
+/* Navbar ---------------------------- */
+
+@media (max-width: 1200px) {
+    .tamanho-tela-mobile {
+        height: calc(90vh) !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .tamanho-tela-desktop {
+        height: calc(100vh - 50px) !important;
+    }
+}
+
+/* Tamanho vertical da tela */
+@media (min-width: 1200px) {
+    .mostrar-navebar {
+        display: block !important;
+    }
+}
+
+.navebar-desktop {
+    display: none;
+    background-color: #e44c78;
+
+    position: sticky;
+    top: calc(100vh - 50px);
+
+    max-width: 100%;
+    height: 50px;
+
+    margin: 0px;
+    padding: 0px;
+    padding-left: 6px;
+}
+
+.navebar-desktop .nav-button{
+    background-color: #94dc52;
+    display: inline-block;
+    height: 50px;
+
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: translateY(-11px);
+}
+
+.navebar-desktop .nav-button p {
+    font-family: "AdLib";
+    font-size: 30px;
+}
+
+.navebar-desktop .nav-button-active {
+    background-color: #ffd343;
+    display: inline-block;
+    height: 60px;
+    transform: translateY(-10px);
+
+    margin-left: 5px;
+    margin-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.navebar-desktop .nav-button-active p {
+    font-family: "AdLib";
+    font-size: 40px;
+}
+
+.navmobile {
+    background-color: #e44c78;
+    font-family: "AdLib"; 
+    font-size: 30px;
+}
+
+.navmobile a{
+    font-weight: normal !important;
+    text-align: right;
 }
 /* ----------------------------------- */
