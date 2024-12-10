@@ -141,8 +141,10 @@ body {
     padding-right: 10px;
 
     transform: translateY(-11px);
+    will-change: transform;
 
     position: relative;
+    box-sizing: border-box; 
     z-index: 1;
 
     transition: 0.1s;
@@ -167,6 +169,7 @@ body {
     display: inline-block;
     height: 60px;
     transform: translateY(-10px);
+    will-change: transform;
 
     margin-left: 5px;
     margin-right: 5px;
@@ -174,6 +177,7 @@ body {
     padding-right: 10px;
 
     position: relative;
+    box-sizing: border-box;
     z-index: 1;
 
     transition: 0.1s;
