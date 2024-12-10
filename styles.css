@@ -110,12 +110,12 @@ body {
 
 /* Tamanho vertical da tela */
 @media (min-width: 1200px) {
-    .mostrar-navebar {
+    .mostrar-navbar {
         display: block !important;
     }
 }
 
-.navebar-desktop {
+.navbar-desktop {
     display: none;
     background-color: #e44c78;
 
@@ -130,7 +130,7 @@ body {
     padding-left: 6px;
 }
 
-.navebar-desktop .nav-button{
+.navbar-desktop .nav-button{
     background-color: #94dc52;
     display: inline-block;
     height: 50px;
@@ -156,13 +156,13 @@ body {
     transform: rotate(-1.5deg) translateY(-10px);
 }
 
-.navebar-desktop .nav-button a {
+.navbar-desktop .nav-button a {
     font-family: "AdLib";
     font-size: 30px;
     text-decoration: none;
 }
 
-.navebar-desktop .nav-button-active {
+.navbar-desktop .nav-button-active {
     background-color: #ffd343;
     display: inline-block;
     height: 60px;
@@ -191,7 +191,7 @@ body {
     text-decoration: none;
 }
 
-.navebar-desktop .nav-button-active a { /* Mobile */
+.navbar-desktop .nav-button-active a { /* Mobile */
     font-family: "AdLib";
     font-size: 40px;
 }
