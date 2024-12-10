@@ -1,41 +1,33 @@
 function addNavButton(icon, text, link) {
-    currentPage = window.location.pathname.replace(/\//g, '');
+    const currentPage = window.location.pathname.replace(/\//g, '');
 
     // NAVBAR DESKTOP
-    const navbarDesktop = document.querySelector('.navebar-desktop');
+    const $navbarDesktop = $('.navbar-desktop');
 
-    const newButton = document.createElement('div'); // Criar div pro botão
-    newButton.classList.add('nav-button');
-    currentPage === link && newButton.classList.add('nav-button-active'); // Tornar botão ativo
+    const isActive = (currentPage === link) || (currentPage === '' && link === 'index.html');
+    const buttonClass = isActive ? 'nav-button-active' : 'nav-button';
 
-    const buttonLink = document.createElement('a');  // Criar link
-    buttonLink.href = link;
-    buttonLink.textContent = `${icon} ${text}`;
-    newButton.appendChild(buttonLink);
+    const $newButton  = $('<div>', { class: buttonClass });
+    const $buttonLink = $('<a>', { href: link, text: `${icon} ${text}` });
 
-    navbarDesktop.appendChild(newButton);            // Adicionar botão na navbar desktop
+    $newButton.append($buttonLink);
+    $navbarDesktop.append($newButton);
 
     // ---------------------------------------------------------------------------------- //
 
     // NAVBAR MOBILE
-    const navbarMobile = document.querySelector('.navbar'); // Obter div da navbar
-    const navList = document.querySelector('.navbar-nav');  // Obter lista dentro da navbar
+    const $navList = $('.navbar-nav'); // Selecionar UL dentro da navbar
 
-    const navItem = document.createElement('li'); // Criar item dentro da lista
-    navItem.classList.add('nav-item', 'ms-2');
-    navItem.classList.add('animated');
+    const $navItem = $('<li>', { class: 'nav-item ms-2 animated' }); // Criar LI
+    const $navLink = $('<a>', {
+        class: `nav-link`,
+        href: link,
+        html: `${icon} ${text}`
+    });
 
-    const navLink = document.createElement('a');  // Criar link
-    navLink.classList.add('nav-link'); 
-    navLink.href = link;
-    navLink.innerHTML = `${icon} ${text}`;
-    currentPage === link && navLink.classList.add('active'); // Tornar botão ativo
-
-    navItem.appendChild(navLink); // Adicionar na navbar.
-    navList.appendChild(navItem);
+    $navItem.append($navLink); // Adicionar o link ao item
+    $navList.append($navItem); // Adicionar o item à lista
 }
-
-console.log()
 
 // Adicionar links na navbar.
 addNavButton('🏠', 'Home',    'index.html');

@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>PVic</title>
+        <title>PVic - Home</title>
+        <link rel="icon" type="image/png" href="img/dots_circle.png" />
 
         <!-- Carregar CSS -->
         <link href="styles.css" rel="stylesheet">
@@ -16,44 +17,21 @@
 
 
     <body>
-
-        <!-- Navbar (mobile) -->
-        <div class="m-0 p-0 d-xl-none sticky-top">
-            <nav data-bs-theme="dark" class="navbar navbar-expand-lg navmobile">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="">
-                        <img style="margin: -5px;" src="img/dots_circle.png" height="50">
-                    </a>
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto"></ul>
-                    </div>
-                </div>
-            </nav>
-        </div>
-
-        <!-- Navbar (Desktop) -->
-        <div class="navebar-desktop mostrar-navebar"></div>
+        <!-- Navbar -->
+        <div id="navbar-mobile"></div>
+        <div class="navbar-desktop mostrar-navbar"></div>
 
         <!-- Página -->
         <div class="container-fluid tamanho-tela-desktop tamanho-tela-mobile
                     d-flex align-items-center justify-content-center">
+    
             <!-- Fundo -->
             <video autoplay muted loop id="video-fundo">
                 <source src="videos/artius.mp4" type="video/mp4">
             </video>
+            <img class="m-3 dots" style="height: 30px" src="img/dots.png" alt="PVic Dots">
 
-            <!-- Semáforo -->
-            <img class="m-3 dots"
-                 style="height: 30px"
-                 src="img/dots.png" alt="PVic Dots">
-
+            <!-- Principal -->
             <div class="row">
                 <!-- Logo -->
                 <div class="col-12 col-xl-6 p-3 p-md-5
@@ -89,9 +67,9 @@
 
         <!-- Carregar Bibliotecas JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-        
-        <!-- Carregar JS -->
-        <script src="js/typewriter.js"></script>
-        <script src="js/navbar.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+        <!-- Carregar scripts -->
+        <script src="js/main.js"></script>
     </body>
 </html>
