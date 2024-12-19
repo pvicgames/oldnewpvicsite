@@ -42,4 +42,6 @@ function deleteWriter() {
 }
 
 // Start the typewriter effect when the page loads
-typeWriter();
+if (getCurrentPage() == "index.html") {
+    typeWriter();
+}

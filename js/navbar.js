@@ -1,6 +1,5 @@
 function addNavButton(icon, text, link) {
-    //const currentPage = window.location.pathname.replace(/\//g, '');
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html'
+    const currentPage = getCurrentPage();
 
     // NAVBAR DESKTOP
     const $navbarDesktop = $('.navbar-desktop');
