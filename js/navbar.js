@@ -33,5 +33,5 @@ function addNavButton(icon, text, link) {
 addNavButton('🏠', 'Home',    'index.html');
 addNavButton('🕹️', 'Games',   'games.html');
 addNavButton('🖼️', 'Gallery', 'gallery.html');
-addNavButton('🫂', 'Members', 'members.html');
+addNavButton('👤', 'Members', 'members.html');
 addNavButton('☎️', 'Contact', 'contact.html');
