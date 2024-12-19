@@ -44,6 +44,20 @@ function addNavButton(icon, text, link) {
         html: `${icon} ${text}`
     });
 
+    // Add fade-to-white effect on click
+    $navLink.on('click', function (e) {
+        e.preventDefault(); // Prevent immediate navigation
+
+        const fadeOverlay = $('#fadeOverlay');
+        fadeOverlay.show(); // Ensure the overlay is visible
+        fadeOverlay.css('opacity', '1'); // Trigger fade-in effect
+
+        // Wait for the fade effect before navigating
+        setTimeout(() => {
+            window.location.href = link; // Navigate after fade
+        }, 500); // Match the CSS transition duration
+    });
+
     $navItem.append($navLink); // Adicionar o link ao item
     $navList.append($navItem); // Adicionar o item à lista
 
@@ -51,8 +65,10 @@ function addNavButton(icon, text, link) {
 }
 
 // Adicionar links na navbar.
-addNavButton('🏠', 'Home',    'index.html');
-addNavButton('🕹️', 'Games',   'games.html');
-addNavButton('🖼️', 'Gallery', 'gallery.html');
-addNavButton('👤', 'Members', 'members.html');
-addNavButton('☎️', 'Contact', 'contact.html');
+function createLinks() {
+    addNavButton('🏠', 'Home',    'index.html');
+    addNavButton('🕹️', 'Games',   'games.html');
+    addNavButton('🖼️', 'Gallery', 'gallery.html');
+    addNavButton('👤', 'Members', 'members.html');
+    addNavButton('☎️', 'Contact', 'contact.html');
+}
