@@ -140,11 +140,8 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 
-    transform: translateY(-11px);
-    will-change: transform;
-
     position: relative;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     z-index: 1;
 
     transition: 0.1s;
@@ -155,7 +152,7 @@ body {
     
     z-index: 5 !important;
     scale: 1.1;
-    transform: rotate(-1.5deg) translateY(-10px);
+    /*transform: rotate(-1.5deg) translateY(-10px);*/
 }
 
 .navbar-desktop .nav-button a {
@@ -167,8 +164,8 @@ body {
 .navbar-desktop .nav-button-active {
     background-color: #ffd343;
     display: inline-block;
-    height: 60px;
-    transform: translateY(-10px);
+    height: 50px;
+    /*transform: translateY(-10px);*/
     will-change: transform;
 
     margin-left: 5px;
@@ -188,7 +185,7 @@ body {
     
     z-index: 5 !important;
     scale: 1.1;
-    transform: rotate(1.5deg) translateY(-10px);
+    /*transform: rotate(1.5deg) translateY(-10px);*/
 }
 
 .nav-button-active:hover a {
@@ -197,7 +194,7 @@ body {
 
 .navbar-desktop .nav-button-active a { /* Mobile */
     font-family: "AdLib";
-    font-size: 40px;
+    font-size: 30px;
 }
 
 .navmobile {
