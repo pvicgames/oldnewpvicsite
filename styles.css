@@ -235,4 +235,7 @@ body {
     height: 135px;
     width: auto;
 }
+
+.icn-right { float: right; }
+.icn-left  { float: left; }
 /* ----------------------------------- */
