@@ -92,6 +92,20 @@ body {
     word-break: break-word;
     hyphens: auto;
 }
+
+/* Fade in e Fade Out */
+#fadeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 1; /* Fully visible by default */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    z-index: 1000; /* Place it above all content */
+}
 /* ----------------------------------- */
 
 /* Navbar ---------------------------- */
@@ -211,15 +225,14 @@ body {
 }
 /* ----------------------------------- */
 
-#fadeOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    opacity: 1; /* Fully visible by default */
-    pointer-events: none; /* Prevent interaction */
-    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
-    z-index: 1000; /* Place it above all content */
+/* Página Membros -------------------- */
+.icone-membro {
+    height: 135px;
+    width: auto;
 }
+
+.vazio-membro {
+    height: 135px;
+    width: auto;
+}
+/* ----------------------------------- */
