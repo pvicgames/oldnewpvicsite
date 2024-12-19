@@ -13,6 +13,20 @@ function addNavButton(icon, text, link) {
     $newButton.append($buttonLink);
     $navbarDesktop.append($newButton);
 
+    // Add fade-to-white effect on click
+    $buttonLink.on('click', function (e) {
+        e.preventDefault(); // Prevent immediate navigation
+
+        const fadeOverlay = $('#fadeOverlay');
+        fadeOverlay.show(); // Ensure the overlay is visible
+        fadeOverlay.css('opacity', '1'); // Trigger fade-in effect
+
+        // Wait for the fade effect before navigating
+        setTimeout(() => {
+            window.location.href = link; // Navigate after fade
+        }, 500); // Match the CSS transition duration
+    });
+
     // ---------------------------------------------------------------------------------- //
 
     // NAVBAR MOBILE
@@ -27,6 +41,8 @@ function addNavButton(icon, text, link) {
 
     $navItem.append($navLink); // Adicionar o link ao item
     $navList.append($navItem); // Adicionar o item à lista
+
+    // ---------------------------------------------------------------------------------- //
 }
 
 // Adicionar links na navbar.

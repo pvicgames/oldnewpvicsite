@@ -210,3 +210,16 @@ body {
     text-decoration: none;
 }
 /* ----------------------------------- */
+
+#fadeOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    opacity: 1; /* Fully visible by default */
+    pointer-events: none; /* Prevent interaction */
+    transition: opacity 0.5s ease-in-out; /* Smooth fade effect */
+    z-index: 1000; /* Place it above all content */
+}

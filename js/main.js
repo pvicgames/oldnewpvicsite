@@ -1,19 +1,33 @@
-// Helper function to dynamically load scripts
+// Função helper para carregar scripts de forma dinâmica
 function loadScript(src) {
-    $.getScript(src)
-        .done()
-        .fail(function (jqxhr, settings, exception) {
-            console.error(`Failed to load script: ${src}`);
-        });
+    return new Promise((resolve, reject) => {
+        $.getScript(src)
+            .done(() => resolve())
+            .fail((jqxhr, settings, exception) => reject(exception));
+    });
 }
 
 // Carregar scripts.
+async function loadScripts() {
+    try {
+        await loadScript("js/misc.js");     
+        await loadScript("js/navbar.js"); 
+        await loadScript("js/typewriter.js");
+        console.log("All scripts loaded successfully!");
+    } catch (err) {
+        console.error("Error loading scripts:", err);
+    }
+}
+
+// Função principal.
 $(document).ready(function () {
-    loadScript("js/misc.js");
+    loadScripts();
 
-    loadScript("js/typewriter.js"); // Máquina de escrever
-
-    // Navbar.
+    // Importar Navbar mobile.
     $("#navbar-mobile").load("parts/navbar_mobile.html");
-    loadScript("js/navbar.js");
+
+     // Ensure the fadeOverlay fades out on page load
+     const fadeOverlay = $('#fadeOverlay');
+     fadeOverlay.css('opacity', '0'); // Fade out the overlay
+     setTimeout(() => fadeOverlay.hide(), 500); // Hide it after the animation ends
 });
