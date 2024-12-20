@@ -226,16 +226,46 @@ body {
 /* ----------------------------------- */
 
 /* Página Membros -------------------- */
-.icone-membro {
-    height: 135px;
-    width: auto;
+.grades-icones {
+    max-width: 700px !important;
+    margin-top: -55px !important;
 }
 
-.vazio-membro {
-    height: 135px;
-    width: auto;
+.grades-icones p {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 140px;
 }
 
-.icn-right { float: right; }
-.icn-left  { float: left; }
+.no-anim { animation: none !important; }
+.no-anim:hover { animation: none !important; }
+
+.member-icon {
+    height: 140px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    animation: none;
+    /*outline-width: 5px;
+    outline-style: solid;
+    background-color: #3c89d7;
+    outline: #94dc52;*/
+}
+
+.member-icon:hover {
+    -webkit-animation: flip 1s;
+    animation: flip 1s;
+    animation-fill-mode: forwards;
+
+}
+
+.pedro-icon    { background-image: url('img/team/pvic.webp');     }
+.shin-icon     { background-image: url('img/team/shin.webp');     }
+.bitto-icon    { background-image: url('img/team/bitto.webp');    }
+.pablo-icon    { background-image: url('img/team/pablo.webp');    }
+.prancha-icon  { background-image: url('img/team/prancha.webp');  }
+.casanova-icon { background-image: url('img/team/casanova.webp'); }
+.glace-icon    { background-image: url('img/team/glace.webp');    }
+.speed-icon    { background-image: url('img/team/speed.webp');    }
 /* ----------------------------------- */
