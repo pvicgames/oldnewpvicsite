@@ -226,9 +226,43 @@ body {
 /* ----------------------------------- */
 
 /* Página Membros -------------------- */
+/* Texto */
+.membros-texto {
+    background-color: rgba(60, 137, 215, 0.5);
+    max-width: 700px !important;
+    height: 560px;
+    margin: 10px;
+    padding: 10px;
+}
+
+@media (min-width: 1200px) {
+    .membros-texto {
+        margin-top: -55px !important;
+    }
+}
+
+.membros-texto h1 {
+    font-size: 50px;
+}
+
+.membros-foto {
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('img/team/casanova.webp');
+}
+
+
+/* Ícones */
 .grades-icones {
     max-width: 700px !important;
-    margin-top: -55px !important;
+}
+
+@media (min-width: 1200px) {
+    .grades-icones {
+        margin-top: -55px !important;
+    }
 }
 
 .grades-icones p {
@@ -257,7 +291,6 @@ body {
     -webkit-animation: flip 1s;
     animation: flip 1s;
     animation-fill-mode: forwards;
-
 }
 
 .pedro-icon    { background-image: url('img/team/pvic.webp');     }
