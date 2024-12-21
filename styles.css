@@ -287,11 +287,11 @@ body {
     outline: #94dc52;*/
 }
 
-.member-icon:hover {
+/*.member-icon:hover {
     -webkit-animation: flip 1s;
     animation: flip 1s;
     animation-fill-mode: forwards;
-}
+}*/
 
 .pedro-icon    { background-image: url('img/team/pvic.webp');     }
 .shin-icon     { background-image: url('img/team/shin.webp');     }
