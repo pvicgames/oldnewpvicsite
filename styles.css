@@ -227,7 +227,7 @@ body {
 
 /* Página Membros -------------------- */
 /* Texto */
-.membros-texto {
+#member-text {
     background-color: rgba(60, 137, 215, 0.5);
     max-width: 700px !important;
     height: 560px;
@@ -235,22 +235,31 @@ body {
     padding: 10px;
 }
 
+.hidden {
+    opacity: 0;
+}
+
 @media (min-width: 1200px) {
-    .membros-texto {
+    #member-text {
         margin-top: -55px !important;
     }
 }
 
-.membros-texto h1 {
+#member-text h1 {
     font-size: 50px;
 }
 
-.membros-foto {
+.members-photo {
     height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-image: url('img/team/casanova.webp');
+}
+
+#close-button {
+    font-size: 20px;
+    font-weight: bold;
 }
 
 
