@@ -8,6 +8,9 @@ const textDesc = $('#text-desc');
 const pic1 = $('#pic1');
 const pic2 = $('#pic2');
 const pic3 = $('#pic3');
+const link1 = $('#link1');
+const link2 = $('#link2');
+const link3 = $('#link3');
 
 let text_displaying = false
 
@@ -46,36 +49,35 @@ memberIcon.on('click', function() {
             });
         }
 
-        /* Definir descrição dos membros.
-        switch (true) {
-            // Casanova.
-            case memberIcon.hasClass("casanova-icon"):
-                $.getJSON(current_members_text, function (data, textStatus, jqXHR) {
-                    let path = data.casanova;
-
-                    pic1.css("background-image", `url(${path.pic1})`);
-                    pic2.css("background-image", `url(${path.pic2})`);
-                    pic3.css("background-image", `url(${path.pic3})`);
-                    textName.text(path.name);
-                    textRole.text(path.role);
-                    textDesc.html(path.desc.replace(/\n/g, '<br>')); // Replace \n with <br> for line breaks
-                });
-                break;
-        
-            default:
-                break;
-        }*/
-
+        // Mudar texto.
         $.getJSON(current_members_text, function (data, textStatus, jqXHR) {
             let path
             
-            if (memberIcon.hasClass("casanova-icon")) {
-                path = data.casanova;
+            switch (true) {
+                case clickedIcon.hasClass("casanova-icon"):
+                    path = data.casanova;
+                    break;
+                case clickedIcon.hasClass("pedro-icon"):
+                    path = data.pedro;
+                    break;
+            
+                default:
+                    path = data.default;
+                    break;
             }
 
+            // Definir atributos.
             pic1.css("background-image", `url(${path.pic1})`);
             pic2.css("background-image", `url(${path.pic2})`);
             pic3.css("background-image", `url(${path.pic3})`);
+
+            link1.text(path.link1_name);
+            link2.text(path.link2_name);
+            link3.text(path.link3_name);
+            link1.attr("href", `${path.link1}`);
+            link2.attr("href", `${path.link2}`);
+            link3.attr("href", `${path.link3}`);
+            
             textName.text(path.name);
             textRole.text(path.role);
             textDesc.html(path.desc.replace(/\n/g, '<br>')); // Replace \n with <br> for line breaks
