@@ -1,0 +1,18 @@
+{
+    "casanova": {
+        "name":  "Gabriel Casanova",
+        "pic1":  "./img/team_pics/casanova_1.png",
+        "pic2":  "./img/team_pics/casanova_2.jpg",
+        "pic3":  "./img/team_pics/casanova_3.jpg",
+        
+        "link1": "https://gabrielcasanova.com.br/",
+        "link2": "https://www.linkedin.com/in/gbcasanova/", 
+        "link3": "https://github.com/gabcasanova",
+        "link1_name": "portifolio",
+        "link2_name": "linkedin",
+        "link3_name": "github",
+        
+        "role":  "web developer, brand designer, team org.",
+        "desc":  "Hi! I'm Gabriel Casanova, and I hold an associate degree in Information Technology from the Rio de Janeiro Institute of Higher Education (ISERJ/FAETEC). My experience spans several areas of computing, including developing systems and websites in Java, creating Android apps, and designing MySQL databases, among other things.\n\n At PVic Games, my main focus is programming outside the games themselves. I'm the one who developed the website you're browsing right now and also designed the team's branding. Additionally, I help Pedro with team organization and task management."
+    }
+}
