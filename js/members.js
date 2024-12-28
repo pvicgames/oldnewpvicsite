@@ -41,6 +41,7 @@ memberIcon.on('click', function() {
                 });
 
                 window.location.href = '#member-text'
+
             } else {
                 memberText // Fade in da direita
                 .addClass('animate__animated animate__fadeInRight') 
@@ -119,6 +120,11 @@ closeButton.on('click', function () {
         .one('animationend', function() {
             memberText.removeClass('animate__animated animate__fadeOutRight');
         });
+
+    // Checar se esta no mobile
+    if ($(window).width() < 1200) { 
+        window.location.href = '#icones'
+    }
 
     text_displaying = false
 });
