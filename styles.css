@@ -260,6 +260,7 @@ body {
 #close-button {
     font-size: 20px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 
@@ -281,7 +282,7 @@ body {
     line-height: 140px;
 }
 
-.no-anim { animation: none !important; }
+.no-anim { animation: none !important; cursor: auto !important;}
 .no-anim:hover { animation: none !important; }
 
 .member-icon {
@@ -290,6 +291,7 @@ body {
     background-size: cover;
     background-position: center;
     animation: none;
+    cursor: pointer;
     /*outline-width: 5px;
     outline-style: solid;
     background-color: #3c89d7;
