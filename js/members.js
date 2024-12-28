@@ -24,7 +24,6 @@ memberIcon.on('click', function() {
 
     // Checar se não está clicando em espaço vazio.
     if (!clickedIcon.hasClass("no-anim")) {
-
         clickedIcon // Tocar animação de flip.
             .addClass('animate__animated animate__flip')
             .one('animationend', function() {
@@ -32,21 +31,34 @@ memberIcon.on('click', function() {
             });
 
         // Fade in do texto.
-        if (!text_displaying) { // Fade in da direita
-            memberText
-            .addClass('animate__animated animate__fadeInRight') 
-            .one('animationend', function() {
-                memberText.removeClass('animate__animated animate__fadeInRight hidden');
-            });
+        if (!text_displaying) { 
+            // Checar se esta no mobile
+            if ($(window).width() < 1200) { 
+                memberText                  // fade in tradicional
+                .addClass('animate__animated animate__fadeIn') 
+                .one('animationend', function() {
+                    memberText.removeClass('animate__animated animate__fadeIn hidden'); 
+                });
 
+                window.location.href = '#member-text'
+            } else {
+                memberText // Fade in da direita
+                .addClass('animate__animated animate__fadeInRight') 
+                .one('animationend', function() {
+                    memberText.removeClass('animate__animated animate__fadeInRight hidden');
+                });
+            }
+            
             text_displaying = true
 
         } else { // Fade in quando já aberto
             memberText
-            .addClass('animate__animated animate__fadeIn') 
-            .one('animationend', function() {
-                memberText.removeClass('animate__animated animate__fadeIn hidden'); 
-            });
+                .addClass('animate__animated animate__fadeIn') 
+                .one('animationend', function() {
+                    memberText.removeClass('animate__animated animate__fadeIn hidden'); 
+                });
+
+            window.location.href = '#member-text'
         }
 
         // Mudar texto.
