@@ -57,8 +57,23 @@ memberIcon.on('click', function() {
                 case clickedIcon.hasClass("casanova-icon"):
                     path = data.casanova;
                     break;
+                case clickedIcon.hasClass("shin-icon"):
+                    path = data.shin;
+                    break;
+                case clickedIcon.hasClass("bitto-icon"):
+                    path = data.bitto;
+                    break;
+                case clickedIcon.hasClass("prancha-icon"):
+                    path = data.prancha;
+                    break;
                 case clickedIcon.hasClass("pedro-icon"):
                     path = data.pedro;
+                    break;
+                case clickedIcon.hasClass("glace-icon"):
+                    path = data.glace;
+                    break;
+                case clickedIcon.hasClass("speed-icon"):
+                    path = data.speed;
                     break;
             
                 default:
