@@ -36,28 +36,27 @@
                 <div class="container-fluid" style="max-width: 1600px;">
                     <!-- Logo do jogo -->
                     <div class="row d-flex justify-content-center">
-                        <img id="game-logo" class="mt-2 animate__animated animate__backInDown" src="img/games/artius/logo.png">
+                        <img id="game-logo" class="mt-2" src=""> <!-- animate__animated animate__backInDown -->
                     </div>
 
                     <div class="row d-flex">
                         <!-- Imagem principal -->
                         <div class="col-fluid" style="max-width: 600px;">
-                            <img id="game-hero" class="img-fluid animate__animated animate__bounceInLeft" src="img/games/artius/characters.png">
+                            <img id="game-hero" class="img-fluid" src=""> <!-- animate__animated animate__bounceInLeft hero-anim -->
                         </div>
 
                         <!-- Texto -->
-                        <div class="col animate__animated animate__fadeIn">
+                        <div id="desc-section" class="col"> <!--  -->
                             <div class="row mt-5 m-xl-2">
-                                <div id="screenshot-1" class="col m-1 game-screenshot"></div>
-                                <div id="screenshot-2" class="col m-1 game-screenshot"></div>
-                                <div id="screenshot-3" class="col m-1 game-screenshot"></div>
+                                <div id="pic-1" class="col m-1 game-screenshot"></div>
+                                <div id="pic-2" class="col m-1 game-screenshot"></div>
+                                <div id="pic-3" class="col m-1 game-screenshot"></div>
                             </div>
 
                             <div class="row mt-4 m-xl-2 d-flex justify-content-center text-center">
-                                <p>Hugh Mungus, Big Chungus, Morbius, and Among Us represent a fascinating cross-section of internet meme culture, showcasing how humor evolves and spreads across digital platforms. Hugh Mungus, a phrase turned viral, became a symbol of absurdity and miscommunication
-                                </p>
+                                <p id="desc"></p>
 
-                                <img class="mt-4 mb-5 m-xl-0 store-badge" src="img/badges/badge_steam.png">
+                                <img id="steam-badge" class="mt-4 mb-5 m-xl-0 store-badge" src="img/badges/badge_steam.png">
                             </div>
                         </div>
                     </div>
@@ -72,5 +71,6 @@
         <!-- Carregar scripts -->
         <script src="js/main.js"></script>    <!-- Scripts principais -->
         <script src="js/navbar.js"></script>
+        <script src="js/games.js"></script>
     </body>
 </html>
