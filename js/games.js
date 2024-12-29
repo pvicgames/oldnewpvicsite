@@ -76,7 +76,7 @@ function fadeInGame(jsonText) {
 
     $.getJSON(jsonText, (data, textStatus, jqXHR) => {
         let selectedGame = data[currentGame];
-        numberOfGames = data.length;
+        numberOfGames = data.length - 1;
 
         gameLogo.attr("src", selectedGame.logo)
         gameHero.attr("src", selectedGame.hero)
