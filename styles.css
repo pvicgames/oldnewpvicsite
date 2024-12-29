@@ -56,6 +56,13 @@ body {
 /* ----------------------------------- */
 
 /* Classes específicas -------------- */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10; /* Make sure it's above the video */
+  }
+
 .inline {
     display: inline
 }
