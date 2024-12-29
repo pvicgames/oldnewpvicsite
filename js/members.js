@@ -115,15 +115,21 @@ memberIcon.on('click', function() {
 
 // Animação de fechar o texto
 closeButton.on('click', function () {
-    memberText
+    // Checar se esta no mobile
+    if ($(window).width() < 1200) {
+        memberText
+        .addClass('animate__animated animate__fadeOut hidden')
+        .one('animationend', function() {
+            memberText.removeClass('animate__animated animate__fadeOut');
+        });
+
+        window.location.href = '#navbar-mobile'
+    } else {
+        memberText
         .addClass('animate__animated animate__fadeOutRight hidden')
         .one('animationend', function() {
             memberText.removeClass('animate__animated animate__fadeOutRight');
         });
-
-    // Checar se esta no mobile
-    if ($(window).width() < 1200) { 
-        window.location.href = '#icones'
     }
 
     text_displaying = false
