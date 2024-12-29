@@ -47,6 +47,12 @@ body {
     overflow-y: scroll;
 }
 
+@media (min-width: 1200px) {
+    body {
+        overflow-y: hidden
+    }
+}
+
 /* ----------------------------------- */
 
 /* Classes específicas -------------- */
@@ -142,6 +148,8 @@ body {
     margin: 0px;
     padding: 0px;
     padding-left: 6px;
+
+    z-index: 5;
 }
 
 .navbar-desktop .nav-button{
@@ -312,4 +320,66 @@ body {
 .casanova-icon { background-image: url('img/team/casanova.webp'); }
 .glace-icon    { background-image: url('img/team/glace.webp');    }
 .speed-icon    { background-image: url('img/team/speed.webp');    }
+/* ----------------------------------- */
+
+/* Página Games ---------------------- */
+
+#game-logo {
+    max-width: 570px;
+    width: 100%;
+}
+
+#game-hero {
+    position: relative;
+    
+    margin: 0px;
+    padding: 0px;
+}
+
+.game-screenshot {
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+
+#screenshot-1 { background-image: url('img/funny/big-chungus.jpg'); }
+#screenshot-2 { background-image: url('img/funny/hugh-mungus.jpg'); }
+#screenshot-3 { background-image: url('img/funny/amogus.jpg');      }
+
+.store-badge {
+    width: 200px !important;
+}
+
+.store-badge:hover {
+    transform: scale(1.15);
+    transition: 0.1s;
+    filter: drop-shadow(0px 0px 10px black);
+}
+
+@media (min-width: 1200px) { /* desktop */
+    #games-principal {
+        height: calc(100vh - 90px);
+    }
+
+    #game-hero {
+        transform: scale(1.3) translateY(-60px);
+        animation: bounce-in-right 2s ease;
+    }
+
+    @keyframes bounce-in-right {
+        0% {
+          opacity: 0;
+          transform: translateX(-2000px) scale(1.3) translateY(-60px);
+        }
+        40% {
+            opacity: 0;
+            transform: translateX(-2000px) scale(1.3) translateY(-60px);
+        }
+        70% {
+          opacity: 1;
+          transform: translateX(30px) scale(1.3) translateY(-60px);
+        }
+      }
+}
+
 /* ----------------------------------- */

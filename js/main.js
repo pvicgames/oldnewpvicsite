@@ -14,6 +14,6 @@ $(document).ready(function () {
 
     // Ensure the fadeOverlay fades out on page load
     const fadeOverlay = $('#fadeOverlay');
-    fadeOverlay.css('opacity', '0'); // Fade out the overlay
+    fadeOverlay.css('opacity', '0'  ); // Fade out the overlay
     setTimeout(() => fadeOverlay.hide(), 500); // Hide it after the animation ends
 });
