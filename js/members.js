@@ -88,6 +88,9 @@ memberIcon.on('click', function() {
                 case clickedIcon.hasClass("speed-icon"):
                     path = data.speed;
                     break;
+                case clickedIcon.hasClass("pablo-icon"):
+                    path = data.pablo;
+                    break;
             
                 default:
                     path = data.default;
