@@ -33,5 +33,23 @@
         "gplay":   "",
         "gjolt":   "",
         "gxgames": ""
+    },
+
+    {
+        "name": "Ednaldo Pereira Mescladasso DX",
+
+        "logo": "./img/games/edmescdx/logo.png",
+        "hero": "./img/games/edmescdx/ednaldorender.png",
+
+        "pic1": "./img/games/edmescdx/pic1.jpg",
+        "pic2": "./img/games/edmescdx/pic2.jpg",
+        "pic3": "./img/games/edmescdx/pic3.jpg",
+
+        "desc": "Remaster of the original collectathon Ednaldo Pereira: MESCLADASSO. Play as Ednaldo and Fleig, going through a plethra of different stages. In this game you'll be introduced to the successful EDNALDO PEREIRA. A human being so powerful few are able to fully grasp. The universe is in shambles due to the evildoings of the Dark Elite and you must stop them by using your powers!",
+
+        "steam":   "https://store.steampowered.com/app/2879870/Ednaldo_Pereira_MESCLADASSO_DX/",
+        "gplay":   "",
+        "gjolt":   "",
+        "gxgames": ""
     }
 ]

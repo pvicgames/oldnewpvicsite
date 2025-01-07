@@ -405,4 +405,29 @@ canvas {
     100% {}
 }
 
+#arrow-left{
+    max-width: 70px;
+    padding: 0px;
+    z-index: 5;
+}
+
+#arrow-left:hover{
+    cursor: pointer;
+}
+
+
+#arrow-right{
+    max-width: 70px;
+    padding: 0px;
+    z-index: 5;
+}
+
+#arrow-right:hover{
+    cursor: pointer;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
 /* ----------------------------------- */

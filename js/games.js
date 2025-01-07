@@ -16,6 +16,9 @@ let currentGame = 0
 let numberOfGames
 let gamesText = "./parts/games_en.json"
 
+let arrowRight = $('#arrow-right')
+let arrowLeft = $('#arrow-left')
+
 /* --------------------------------------------------- */
 
 /* Animations */
@@ -59,12 +62,32 @@ function updateGame(jsonText, add) {
         gameLogo.addClass(animations.fade_in.logo);
         gameHero.addClass(animations.fade_in.hero);
         descSection.addClass(animations.fade_in.desc);
+
+        arrowLeft.addClass('hidden');
+        arrowRight.addClass('hidden');
         
         // Finalizar animações.
         gameHero.one('animationend', function() {
             gameLogo.removeClass(animations.fade_in.logo);
             gameHero.removeClass(animations.fade_in.hero);
             descSection.removeClass(animations.fade_in.desc);
+
+            if (currentGame > 0) {
+                arrowLeft.removeClass("hidden")
+                arrowLeft.addClass(animations.fade_in.desc)
+                arrowLeft.one('animationend', () => {
+                    arrowLeft.removeClass(animations.fade_in.desc)
+                })
+            }
+
+            if (currentGame < numberOfGames) {
+                arrowRight.removeClass("hidden")
+                arrowRight.addClass(animations.fade_in.desc)
+                arrowRight.one('animationend', () => {
+                    arrowRight.removeClass(animations.fade_in.desc)
+                })
+            }
+            
 
             inTransition = false;
         });  
@@ -92,6 +115,9 @@ function fadeInGame(jsonText) {
     gameLogo.addClass(animations.fade_in.logo);
     gameHero.addClass(animations.fade_in.hero);
     descSection.addClass(animations.fade_in.desc);
+
+    arrowLeft.addClass('hidden');
+    arrowRight.addClass('hidden');
     
     // Finalizar animações.
     gameHero.one('animationend', function() {
@@ -99,9 +125,41 @@ function fadeInGame(jsonText) {
         gameHero.removeClass(animations.fade_in.hero);
         descSection.removeClass(animations.fade_in.desc);
 
+        if (currentGame > 0) {
+            arrowLeft.removeClass("hidden")
+            arrowLeft.addClass(animations.fade_in.desc)
+            arrowLeft.one('animationend', () => {
+                arrowLeft.removeClass(animations.fade_in.desc)
+            })
+        }
+
+        if (currentGame < numberOfGames) {
+            arrowRight.removeClass("hidden")
+            arrowRight.addClass(animations.fade_in.desc)
+            arrowRight.one('animationend', () => {
+                arrowRight.removeClass(animations.fade_in.desc)
+            })
+        }
+
         inTransition = false;
     });
 }
+
+arrowRight.on('click', () => {
+    if (!inTransition) {
+        if (currentGame < numberOfGames) {
+            updateGame(gamesText, 1);
+        }
+    }
+})
+
+arrowLeft.on('click', () => {
+    if (!inTransition) {
+        if (currentGame > 0) {
+            updateGame(gamesText, -1);
+        }
+    }
+})
 
 window.addEventListener('keydown', (e) => {
     if (!inTransition) {
