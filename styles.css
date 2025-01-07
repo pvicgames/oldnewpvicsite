@@ -407,6 +407,7 @@ canvas {
 
 #arrow-left{
     max-width: 70px;
+    height: 70px;
     padding: 0px;
     z-index: 5;
 }
@@ -418,6 +419,7 @@ canvas {
 
 #arrow-right{
     max-width: 70px;
+    height: 70px;
     padding: 0px;
     z-index: 5;
 }
