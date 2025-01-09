@@ -116,6 +116,9 @@ function fadeInGame(jsonText) {
     if (inTransition) return;
     inTransition = true;
 
+    arrowLeft.addClass('hidden')
+    arrowRight.addClass('hidden')
+
     loadGameData(jsonText, (gameData) => {
         applyGameData(gameData);
 
@@ -125,9 +128,21 @@ function fadeInGame(jsonText) {
             descSection.addClass(animations.fadeIn.desc),
         ];
 
-        toggleArrows();
         handleAnimationEnd(animatedElements, () => {
-            inTransition = false;
+            arrowLeft.removeClass('hidden')         
+            arrowRight.removeClass('hidden')       
+
+            arrowLeft.addClass(animations.fadeIn.desc)
+            arrowRight.addClass(animations.fadeIn.desc)
+
+            toggleArrows();
+
+            arrowLeft.one('animationend', () => {
+                inTransition = false;
+            })
+            arrowRight.one('animationend', () => {
+                inTransition = false;
+            })
         });
     });
 }
