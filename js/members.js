@@ -33,7 +33,7 @@ memberIcon.on('click', function() {
         // Fade in do texto.
         if (!text_displaying) { 
             // Checar se esta no mobile
-            if ($(window).width() < 1200) { 
+            if ($(window).width() < 900) { 
                 memberText                  // fade in tradicional
                 .addClass('animate__animated animate__fadeIn') 
                 .one('animationend', function() {

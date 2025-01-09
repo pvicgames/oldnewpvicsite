@@ -428,7 +428,7 @@ canvas {
     cursor: pointer;
 }
 
-.hidden {
+.hidden-arrow {
     visibility: hidden;
 }
 

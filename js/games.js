@@ -45,8 +45,8 @@ function applyGameData(gameData) {
 }
 
 function toggleArrows() {
-    arrowLeft.toggleClass('hidden', currentGame <= 0);
-    arrowRight.toggleClass('hidden', currentGame >= numberOfGames);
+    arrowLeft.toggleClass('hidden-arrow', currentGame <= 0);
+    arrowRight.toggleClass('hidden-arrow', currentGame >= numberOfGames);
 }
 
 function handleAnimationEnd(elements, callback) {
@@ -102,6 +102,9 @@ function updateGame(jsonText, step) {
                 toggleArrows();
 
                 arrowLeft.one('animationend', () => {
+                    inTransition = false;
+                })
+                arrowRight.one('animationend', () => {
                     inTransition = false;
                 })
             });
