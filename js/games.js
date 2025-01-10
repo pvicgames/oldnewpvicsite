@@ -23,6 +23,7 @@ const animations = {
         logo: "animate__animated animate__backInDown",
         hero: "animate__animated animate__bounceInLeft hero-anim",
         desc: "animate__animated animate__fadeIn",
+        arrow: "animate__animated animate__fadeIn animate__faster"
     },
     fadeOut: "animate__animated animate__fadeOut",
 };
@@ -73,8 +74,8 @@ function updateGame(jsonText, step) {
 
         arrowLeft.addClass('hidden')
         arrowRight.addClass('hidden')
-        arrowLeft.removeClass(animations.fadeIn.desc)         
-        arrowRight.removeClass(animations.fadeIn.desc)
+        arrowLeft.removeClass(animations.fadeIn.arrow)         
+        arrowRight.removeClass(animations.fadeIn.arrow)
 
         gamesPrincipal.addClass('hidden');
         gamesPrincipal.removeClass(animations.fadeOut);
@@ -96,8 +97,8 @@ function updateGame(jsonText, step) {
                 arrowLeft.removeClass('hidden')         
                 arrowRight.removeClass('hidden')       
 
-                arrowLeft.addClass(animations.fadeIn.desc)
-                arrowRight.addClass(animations.fadeIn.desc)
+                arrowLeft.addClass(animations.fadeIn.arrow)
+                arrowRight.addClass(animations.fadeIn.arrow)
 
                 toggleArrows();
 
@@ -132,8 +133,8 @@ function fadeInGame(jsonText) {
             arrowLeft.removeClass('hidden')         
             arrowRight.removeClass('hidden')       
 
-            arrowLeft.addClass(animations.fadeIn.desc)
-            arrowRight.addClass(animations.fadeIn.desc)
+            arrowLeft.addClass(animations.fadeIn.arrow)
+            arrowRight.addClass(animations.fadeIn.arrow)
 
             toggleArrows();
 
