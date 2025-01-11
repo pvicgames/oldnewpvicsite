@@ -3,11 +3,11 @@ function getCurrentPage() {
     return currPage
 }
 
-function addNavButton(icon, text, link) {
-    const currentPage = getCurrentPage();
+// NAVBAR DESKTOP
+const $navbarDesktop = $('.navbar-desktop');
 
-    // NAVBAR DESKTOP
-    const $navbarDesktop = $('.navbar-desktop');
+function addNavButton(icon, text, link) {
+    const currentPage = getCurrentPage();    
 
     const isActive = (currentPage === link) || (currentPage === '' && link === 'index.html');
     const buttonClass = isActive ? 'nav-button-active' : 'nav-button';
@@ -64,11 +64,32 @@ function addNavButton(icon, text, link) {
     // ---------------------------------------------------------------------------------- //
 }
 
+function createLanguageSelector() {
+    const $languageSelector = $('<div>', { class: 'order-3 p-2 d-flex align-items-end ms-auto' })
+    .append(
+        $('<a>', {
+            href: '#',
+            text: '[english]',
+            click: function() { changeLanguage('en'); }
+        }),
+        ' / ',
+        $('<a>', {
+            href: '#',
+            text: '[portuguese]',
+            click: function() { changeLanguage('pt'); }
+        })
+    );
+
+    $navbarDesktop.append($languageSelector);
+}
+
+createLanguageSelector()
+
 // Adicionar links na navbar.
 function createLinks() {
     addNavButton('🏠', 'Home',    'index.html');
     addNavButton('🕹️', 'Games',   'games.html');
-    addNavButton('🖼️', 'Gallery', 'gallery.html');
+    addNavButton('🖼️', 'Gallery', 'https://www.instagram.com/pvicvg/');
     addNavButton('👤', 'Members', 'members.html');
     addNavButton('☎️', 'Contact', 'contact.html');
 }

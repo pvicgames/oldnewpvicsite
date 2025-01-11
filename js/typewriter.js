@@ -1,4 +1,4 @@
-const words = [
+const words_en = [
     "Imagination.", 
     "Creativity.", 
     "Inspiration.", 
@@ -7,6 +7,17 @@ const words = [
     "Awesome."
 ];
 
+const words_pt = [
+    "Imaginação.",
+    "Criatividade.",
+    "Inspiração.",
+    "Liberdade.",
+    "Magia.",
+    "Maravilha."
+];
+
+let words
+
 let currentWordIndex = 0;
 let textElement = document.getElementById("maquina-escrever");
 let typingSpeed = 150;
@@ -14,6 +25,12 @@ let deletingSpeed = 75;
 let pauseDuration = 1000;
 
 function typeWriter() {
+    if (userPreferredLanguage == 'en') {
+        words = words_en;
+    } else if (userPreferredLanguage == 'pt') {
+        words = words_pt;
+    }
+
     let currentWord = words[currentWordIndex];
     let currentText = textElement.innerText;
 
