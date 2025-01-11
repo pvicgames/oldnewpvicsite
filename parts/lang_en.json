@@ -1,7 +1,22 @@
 {
+    "navbar": {
+        "home":    "Home",
+        "games":   "Games",
+        "gallery": "Gallery",
+        "members": "Members",
+        "contact": "Contact"
+    },
+
     "index": {
         "typewriter_static": "Pure ",
         "description_text": "in times of constant noise, we choose to offer creative silence: unique worlds designed to inspire, connect, and spark dreams. <br>imagination is the ultimate refuge of freedom."
+    },
+
+    "members": {
+        "director":  "director",
+        "artists":   "artists",
+        "coders":    "coders",
+        "musicians": "musicians"
     },
 
     "contact": {
