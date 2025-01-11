@@ -1,0 +1,55 @@
+{
+    "default": {
+        "pic1": "./img/",
+        "pic2": "./img/",
+        "pic3": "./img/",
+        
+        "link1": "",
+        "link2": "", 
+        "link3": "",
+        "link1_name": "",
+        "link2_name": "",
+        "link3_name": "",
+        
+        "name": "",
+        "role": "",
+
+        "desc": ""
+    },
+
+    "casanova": {
+        "pic1": "./img/team_pics/casanova_1.png",
+        "pic2": "./img/team_pics/casanova_2.jpg",
+        "pic3": "./img/team_pics/casanova_3.jpg",
+        
+        "link1": "https://gabrielcasanova.com.br/",
+        "link2": "https://www.linkedin.com/in/gbcasanova/", 
+        "link3": "https://github.com/gabcasanova",
+        "link1_name": "portfólio",
+        "link2_name": "linkedin",
+        "link3_name": "github",
+
+        "name": "Gabriel Casanova",
+        "role": "desenvolvedor web, designer de marca, organização da equipe",
+
+        "desc": "Olá! Sou Gabriel Casanova, e tenho um diploma de Tecnologia da Informação pelo Instituto Superior de Educação do Rio de Janeiro (ISERJ/FAETEC). Minha experiência abrange várias áreas da computação, incluindo o desenvolvimento de sistemas e websites em Java, criação de aplicativos Android e design de bancos de dados MySQL, entre outras coisas.\n\nNa PVic Games, meu principal foco é a programação fora dos próprios jogos. Fui eu quem desenvolveu o site que você está navegando agora e também criei a identidade visual da equipe. Além disso, ajudo o Pedro com a organização da equipe e gerenciamento de tarefas."
+    },
+
+    "pedro": {
+        "pic1": "./img/team_pics/pedro_2.png",
+        "pic2": "./img/team_pics/pedro_3.png",
+        "pic3": "./img/team_pics/pedro_1.png",
+        
+        "link1": "https://x.com/cooperblackgame",
+        "link2": "mailto:pvicvg@gmail.com", 
+        "link3": "https://bit.ly/pvicvg",
+        "link1_name": "twitter",
+        "link2_name": "email",
+        "link3_name": "portfólio",
+
+        "name": "Pedro 'Pvic' Victor",
+        "role": "diretor, designer de jogos, designer de níveis, artista, programador",
+
+        "desc": "Sou um desenvolvedor de jogos independente em ascensão, nascido e criado principalmente no sul do Brasil. Tenho conhecimento em design de jogos, programação, pixel art, design gráfico e gerenciamento de mídias sociais, entre outros. Meu foco nos últimos anos tem sido em jogos de plataforma 2D, mas também tenho conhecimento em outros gêneros."
+    }
+}

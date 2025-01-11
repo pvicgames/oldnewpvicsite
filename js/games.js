@@ -14,8 +14,14 @@ const arrowLeft  = $('#arrow-left');
 // Variables
 let currentGame = 0;
 let numberOfGames;
-const gamesText = "./parts/games_en.json";
 let inTransition = false;
+
+let gamesText
+if (userPreferredLanguage == 'en') {
+    gamesText = "./parts/games_en.json";
+} else if (userPreferredLanguage == 'pt') {
+    gamesText = "./parts/games_pt.json";
+}
 
 // Animations
 const animations = {

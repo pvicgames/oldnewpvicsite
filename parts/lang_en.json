@@ -2,5 +2,10 @@
     "index": {
         "typewriter_static": "Pure ",
         "description_text": "in times of constant noise, we choose to offer creative silence: unique worlds designed to inspire, connect, and spark dreams. <br>imagination is the ultimate refuge of freedom."
+    },
+
+    "contact": {
+        "title": "Contact Us.",
+        "description": "reach out — let’s turn imagination into reality"
     }
 }

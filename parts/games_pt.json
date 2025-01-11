@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Artius",
+
+        "logo": "./img/games/artius/logo.png",
+        "hero": "./img/games/artius/characters.png",
+
+        "pic1": "./img/funny/hugh-mungus.jpg",
+        "pic2": "./img/funny/amogus.jpg",
+        "pic3": "./img/funny/big-chungus.jpg",
+
+        "desc": "Hugh CASANOVA, Big Chungus, Morbius e Among Us representam uma fascinante interseção da cultura dos memes da internet, mostrando como o humor evolui e se espalha nas plataformas digitais. Hugh Mungus, uma frase que se tornou viral, virou um símbolo de absurdo e má comunicação.",
+
+        "steam": "http://google.com/",
+        "gplay": "",
+        "gjolt": "",
+        "gxgames": ""
+    },
+
+    {
+        "name": "Ednaldo Pereira Mescladasso DX",
+
+        "logo": "./img/games/edmescdx/logo.png",
+        "hero": "./img/games/edmescdx/ednaldorender.png",
+
+        "pic1": "./img/games/edmescdx/pic1.jpg",
+        "pic2": "./img/games/edmescdx/pic2.jpg",
+        "pic3": "./img/games/edmescdx/pic3.jpg",
+
+        "desc": "Remasterização do jogo de plataforma Ednaldo Pereira: MESCLADASSO. Jogue com Ednaldo e Fleig, passando por uma variedade de diferentes estágios coletando notas douradas! Neste jogo, você será apresentado ao grandioso mestre EDNALDO PEREIRA. O universo está em ruínas devido às maldades da Elite Preta e você deve detê-los usando seus poderes de músico!",
+
+        "steam": "https://store.steampowered.com/app/2879870/Ednaldo_Pereira_MESCLADASSO_DX/",
+        "gplay": "",
+        "gjolt": "",
+        "gxgames": ""
+    }
+]

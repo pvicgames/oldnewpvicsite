@@ -14,8 +14,12 @@ const link3 = $('#link3');
 
 let text_displaying = false
 
-const members_en_text = "./parts/members_en.json";
-let current_members_text = members_en_text;
+let current_members_text
+if (userPreferredLanguage == 'en') {
+    current_members_text = "./parts/members_en.json";
+} else if (userPreferredLanguage == 'pt') {
+    current_members_text = "./parts/members_pt.json";
+}
 
 // Animação flip
 memberIcon.on('click', function() {
