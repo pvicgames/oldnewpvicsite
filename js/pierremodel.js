@@ -127,7 +127,7 @@ function animate() {
 }
 animate();
 
-/* Handle resizing
+// Handle resizing
 window.addEventListener('resize', () => {
     // Update the renderer and camera when the window resizes
     const containerWidth = container.clientWidth;
@@ -136,4 +136,4 @@ window.addEventListener('resize', () => {
 
     camera.aspect = containerWidth / containerHeight;
     camera.updateProjectionMatrix();
-});*/
+});
