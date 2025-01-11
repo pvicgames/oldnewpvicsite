@@ -15,7 +15,7 @@
 .color-criatividade {color: #e44c78;}
 .color-alegria {color: #ffd343;}
 .color-pureza {color: #94dc52;}
-.color-imaginacao {color: #3c89d7;}
+.color-imaginacao {color: #3c89d7 !important;}
 
 /* ----------------------------------- */
 
@@ -430,6 +430,15 @@ canvas {
 
 .hidden-arrow {
     visibility: hidden;
+}
+/* ----------------------------------- */
+
+/* Página Contato -------------------- */
+
+#canvas {
+    width: 500px;
+    height: 500px;
+    position: relative;
 }
 
 /* ----------------------------------- */
