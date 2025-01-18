@@ -17,7 +17,7 @@ function addNavButton(icon, text, link) {
     const currentPage = getCurrentPage();    
 
     $.getJSON(navText, (data, textStatus, jqXHR) => {
-        console.log(data)
+        //console.log(data)
         const isActive = (currentPage === link) || (currentPage === '' && link === 'index.html');
         const buttonClass = isActive ? 'nav-button-active' : 'nav-button';
 

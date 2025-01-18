@@ -7,9 +7,11 @@ const pic1 = $('#pic-1');
 const pic2 = $('#pic-2');
 const pic3 = $('#pic-3');
 const desc = $('#desc');
-const steamBadge = $('#steam-badge');
 const arrowRight = $('#arrow-right');
-const arrowLeft  = $('#arrow-left');
+const arrowLeft = $('#arrow-left');
+const steamBadge = $('#steam-badge');
+const gplayBadge = $('#gplay-badge');
+const gxgamesBadge = $('#gxgames-badge');
 
 // Variables
 let currentGame = 0;
@@ -80,7 +82,7 @@ function updateGame(jsonText, step) {
 
         arrowLeft.addClass('hidden')
         arrowRight.addClass('hidden')
-        arrowLeft.removeClass(animations.fadeIn.arrow)         
+        arrowLeft.removeClass(animations.fadeIn.arrow)
         arrowRight.removeClass(animations.fadeIn.arrow)
 
         gamesPrincipal.addClass('hidden');
@@ -88,6 +90,30 @@ function updateGame(jsonText, step) {
 
         loadGameData(jsonText, (gameData) => {
             applyGameData(gameData);
+
+            // BADGES (GAME LINKS)
+            if (gameData.steam) {
+                steamBadge.removeClass('true-hidden');
+                steamBadge.attr('href', gameData.steam);
+            } else {
+                steamBadge.addClass('true-hidden')
+            }
+
+            if (gameData.gplay) {
+                gplayBadge.removeClass('true-hidden');
+                gplayBadge.attr('href', gameData.gplay);
+            } else {
+                gplayBadge.addClass('true-hidden')
+            }
+
+            if (gameData.gxgames) {
+                gxgamesBadge.removeClass('true-hidden');
+                gxgamesBadge.attr('href', gameData.gxgames);
+            } else {
+                gxgamesBadge.addClass('true-hidden')
+            }
+
+            
 
             const animatedElements = [
                 gameLogo.addClass(animations.fadeIn.logo),
@@ -98,10 +124,10 @@ function updateGame(jsonText, step) {
             gameLogo.one('animationstart', () => {
                 gamesPrincipal.removeClass('hidden');
             })
-            
+
             handleAnimationEnd(animatedElements, () => {
-                arrowLeft.removeClass('hidden')         
-                arrowRight.removeClass('hidden')       
+                arrowLeft.removeClass('hidden')
+                arrowRight.removeClass('hidden')
 
                 arrowLeft.addClass(animations.fadeIn.arrow)
                 arrowRight.addClass(animations.fadeIn.arrow)
@@ -128,6 +154,16 @@ function fadeInGame(jsonText) {
 
     loadGameData(jsonText, (gameData) => {
         applyGameData(gameData);
+        
+        console.log(gameData)
+
+        // Add Links
+        if (gameData.steam) {
+            steamBadge.removeClass('true-hidden');
+            steamBadge.attr('href', gameData.steam);
+        } else {
+            steamBadge.addClass('true-hidden')
+        }
 
         const animatedElements = [
             gameLogo.addClass(animations.fadeIn.logo),
@@ -136,8 +172,8 @@ function fadeInGame(jsonText) {
         ];
 
         handleAnimationEnd(animatedElements, () => {
-            arrowLeft.removeClass('hidden')         
-            arrowRight.removeClass('hidden')       
+            arrowLeft.removeClass('hidden')
+            arrowRight.removeClass('hidden')
 
             arrowLeft.addClass(animations.fadeIn.arrow)
             arrowRight.addClass(animations.fadeIn.arrow)

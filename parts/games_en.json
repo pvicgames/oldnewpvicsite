@@ -5,16 +5,11 @@
         "logo": "./img/games/artius/logo.png",
         "hero": "./img/games/artius/characters.png",
 
-        "pic1": "./img/funny/hugh-mungus.jpg",
-        "pic2": "./img/funny/amogus.jpg",
-        "pic3": "./img/funny/big-chungus.jpg",
+        "pic1": "./img/games/artius/pic1.png",
+        "pic2": "./img/games/artius/pic2.png",
+        "pic3": "./img/games/artius/pic3.png",
 
-        "desc": "Hugh CASANOVA, Big Chungus, Morbius, and Among Us represent a fascinating cross-section of internet meme culture, showcasing how humor evolves and spreads across digital platforms. Hugh Mungus, a phrase turned viral, became a symbol of absurdity and miscommunication",
-
-        "steam":   "http://google.com/",
-        "gplay":   "",
-        "gjolt":   "",
-        "gxgames": ""
+        "desc": "ARTIUS is a momentum-driven 2D platformer bursting with vibrant creativity. When the envious Pivolo seizes control of the mystical ARTIUS book and imposes an oppressive art dictatorship, it’s up to you to restore freedom. Take charge of four unique artists, each wielding their own creative powers, and fight to save a world on the brink of losing its art forever!"
     },
 
     {
@@ -29,9 +24,22 @@
 
         "desc": "Remaster of the original collectathon Ednaldo Pereira: MESCLADASSO. Play as Ednaldo and Fleig, going through a plethra of different stages. In this game you'll be introduced to the successful EDNALDO PEREIRA. A human being so powerful few are able to fully grasp. The universe is in shambles due to the evildoings of the Dark Elite and you must stop them by using your powers!",
 
-        "steam":   "https://store.steampowered.com/app/2879870/Ednaldo_Pereira_MESCLADASSO_DX/",
-        "gplay":   "",
-        "gjolt":   "",
-        "gxgames": ""
+        "steam":   "https://store.steampowered.com/app/2879870/Ednaldo_Pereira_MESCLADASSO_DX/"
+    },
+
+    {
+        "name": "Ednaldo MOBILE ",
+
+        "logo": "./img/games/edmobile/logo.png",
+        "hero": "./img/games/edmobile/ednaldo.png",
+
+        "pic1": "./img/games/edmobile/pic1.webp",
+        "pic2": "./img/games/edmobile/pic2.webp",
+        "pic3": "./img/games/edmobile/pic3.webp",
+
+        "desc": "Ednaldo Mobile is a FREE captivating platform game inspired by platforming classics that offers an engaging and challenging gaming experience. Explore different stages filled with obstacles, enemies, and treasures to unlock. Overcome thrilling challenges, collect golden notes, and improve your skills while enjoying vibrant graphics and an exciting soundtrack with remixes of Ednaldo's classics.",
+
+        "gplay":   "https://play.google.com/store/apps/details?id=com.pvic.ednaldogame&hl=en_US",
+        "gxgames": "https://gx.games/pt-br/games/s63wx3/ednaldo-pereira-mobile-2d-platformer/"
     }
 ]
