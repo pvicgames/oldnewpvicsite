@@ -113,8 +113,6 @@ function updateGame(jsonText, step) {
                 gxgamesBadge.addClass('true-hidden')
             }
 
-            
-
             const animatedElements = [
                 gameLogo.addClass(animations.fadeIn.logo),
                 gameHero.addClass(animations.fadeIn.hero),
@@ -157,12 +155,26 @@ function fadeInGame(jsonText) {
         
         console.log(gameData)
 
-        // Add Links
+        // BADGES (GAME LINKS)
         if (gameData.steam) {
             steamBadge.removeClass('true-hidden');
             steamBadge.attr('href', gameData.steam);
         } else {
             steamBadge.addClass('true-hidden')
+        }
+
+        if (gameData.gplay) {
+            gplayBadge.removeClass('true-hidden');
+            gplayBadge.attr('href', gameData.gplay);
+        } else {
+            gplayBadge.addClass('true-hidden')
+        }
+
+        if (gameData.gxgames) {
+            gxgamesBadge.removeClass('true-hidden');
+            gxgamesBadge.attr('href', gameData.gxgames);
+        } else {
+            gxgamesBadge.addClass('true-hidden')
         }
 
         const animatedElements = [
