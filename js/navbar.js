@@ -13,15 +13,14 @@ function getCurrentPage() {
 // NAVBAR DESKTOP
 const $navbarDesktop = $('.navbar-desktop');
 
-function addNavButton(icon, text, link) {
-    const currentPage = getCurrentPage();    
+function addNavButton(icon, text, link, target_type) {
+    const currentPage = getCurrentPage();
 
     $.getJSON(navText, (data, textStatus, jqXHR) => {
-        //console.log(data)
         const isActive = (currentPage === link) || (currentPage === '' && link === 'index.html');
         const buttonClass = isActive ? 'nav-button-active' : 'nav-button';
 
-        const $newButton  = $('<div>', { class: buttonClass });
+        const $newButton = $('<div>', { class: buttonClass });
         const $buttonLink = $('<a>', { href: link, text: `${icon} ${data.navbar[text]}` });
 
         $newButton.append($buttonLink);
@@ -29,16 +28,26 @@ function addNavButton(icon, text, link) {
 
         // Add fade-to-white effect on click
         $buttonLink.on('click', function (e) {
-            e.preventDefault(); // Prevent immediate navigation
+            e.preventDefault(); // Prevent default navigation in all cases
 
             const fadeOverlay = $('#fadeOverlay');
             fadeOverlay.show(); // Ensure the overlay is visible
             fadeOverlay.css('opacity', '1'); // Trigger fade-in effect
 
-            // Wait for the fade effect before navigating
-            setTimeout(() => {
-                window.location.href = link; // Navigate after fade
-            }, 500); // Match the CSS transition duration
+            if (target_type === '_blank') {
+                // Open in a new tab immediately
+                window.open(link, '_blank');
+
+                // After the fade effect completes, navigate in the current tab
+                setTimeout(() => {
+                    window.location.href = ''; // Clear the current tab (optional, just to be safe)
+                }, 500); // Match the CSS transition duration
+            } else {
+                // For same-tab navigation, just wait for the fade effect before navigating
+                setTimeout(() => {
+                    window.location.href = link; // Navigate in the same tab
+                }, 500); // Match the CSS transition duration
+            }
         });
     });
 
@@ -56,16 +65,26 @@ function addNavButton(icon, text, link) {
 
     // Add fade-to-white effect on click
     $navLink.on('click', function (e) {
-        e.preventDefault(); // Prevent immediate navigation
+        e.preventDefault(); // Prevent default navigation in all cases
 
         const fadeOverlay = $('#fadeOverlay');
         fadeOverlay.show(); // Ensure the overlay is visible
         fadeOverlay.css('opacity', '1'); // Trigger fade-in effect
 
-        // Wait for the fade effect before navigating
-        setTimeout(() => {
-            window.location.href = link; // Navigate after fade
-        }, 500); // Match the CSS transition duration
+        if (target_type === '_blank') {
+            // Open in a new tab immediately
+            window.open(link, '_blank');
+
+            // After the fade effect completes, navigate in the current tab
+            setTimeout(() => {
+                window.location.href = ''; // Clear the current tab (optional, just to be safe)
+            }, 500); // Match the CSS transition duration
+        } else {
+            // For same-tab navigation, just wait for the fade effect before navigating
+            setTimeout(() => {
+                window.location.href = link; // Navigate in the same tab
+            }, 500); // Match the CSS transition duration
+        }
     });
 
     $navItem.append($navLink); // Adicionar o link ao item
@@ -76,19 +95,19 @@ function addNavButton(icon, text, link) {
 
 function createLanguageSelector() {
     const $languageSelector = $('<div>', { class: 'order-3 p-2 d-flex align-items-end ms-auto' })
-    .append(
-        $('<a>', {
-            href: '#',
-            text: '[english]',
-            click: function() { changeLanguage('en'); }
-        }),
-        ' / ',
-        $('<a>', {
-            href: '#',
-            text: '[portuguese]',
-            click: function() { changeLanguage('pt'); }
-        })
-    );
+        .append(
+            $('<a>', {
+                href: '#',
+                text: '[english]',
+                click: function () { changeLanguage('en'); }
+            }),
+            ' / ',
+            $('<a>', {
+                href: '#',
+                text: '[portuguese]',
+                click: function () { changeLanguage('pt'); }
+            })
+        );
 
     $navbarDesktop.append($languageSelector);
 }
@@ -97,9 +116,9 @@ createLanguageSelector()
 
 // Adicionar links na navbar.
 function createLinks() {
-    addNavButton('🏠', 'home',    'index.html');
-    addNavButton('🕹️', 'games',   'games.html');
-    addNavButton('🖼️', 'gallery', 'https://www.instagram.com/pvicvg/');
-    //addNavButton('👤', 'members', 'members.html');
-    addNavButton('☎️', 'contact', 'contact.html');
+    addNavButton('🏠', 'home', 'index.html', "");
+    addNavButton('🕹️', 'games', 'games.html', "");
+    addNavButton('🖼️', 'gallery', 'https://www.instagram.com/pvicvg/', "_blank");
+    //addNavButton('👤', 'members', 'members.html', "");
+    addNavButton('☎️', 'contact', 'contact.html', "");
 }
