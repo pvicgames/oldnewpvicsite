@@ -116,9 +116,14 @@ createLanguageSelector()
 
 // Adicionar links na navbar.
 function createLinks() {
-    addNavButton('🏠', 'home', 'index.html', "");
-    addNavButton('🕹️', 'games', 'games.html', "");
-    addNavButton('🖼️', 'gallery', 'https://www.instagram.com/pvicvg/', "_blank");
-    //addNavButton('👤', 'members', 'members.html', "");
-    addNavButton('☎️', 'contact', 'contact.html', "");
+    const buttons = [
+        { icon: '🏠', label: 'home',    href: 'index.html', target: '' },
+        { icon: '🕹️', label: 'games',   href: 'games.html', target: '' },
+        { icon: '🖼️', label: 'gallery', href: 'https://www.instagram.com/pvicvg/', target: '_blank' },
+        { icon: '☎️', label: 'contact', href: 'contact.html', target: '' }
+    ];
+
+    buttons.forEach(button => {
+        addNavButton(button.icon, button.label, button.href, button.target);
+    });
 }
