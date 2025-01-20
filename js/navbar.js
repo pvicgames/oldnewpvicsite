@@ -100,6 +100,6 @@ function createLinks() {
     addNavButton('🏠', 'home',    'index.html');
     addNavButton('🕹️', 'games',   'games.html');
     addNavButton('🖼️', 'gallery', 'https://www.instagram.com/pvicvg/');
-    addNavButton('👤', 'members', 'members.html');
+    //addNavButton('👤', 'members', 'members.html');
     addNavButton('☎️', 'contact', 'contact.html');
 }
