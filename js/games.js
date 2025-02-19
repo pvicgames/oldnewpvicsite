@@ -20,9 +20,9 @@ let inTransition = false;
 
 let gamesText
 if (userPreferredLanguage == 'en') {
-    gamesText = "./parts/games_en.json";
+    gamesText = "./parts/old_games_en.json";
 } else if (userPreferredLanguage == 'pt') {
-    gamesText = "./parts/games_pt.json";
+    gamesText = "./parts/old_games_pt.json";
 }
 
 // Animations
