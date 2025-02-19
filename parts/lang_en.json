@@ -1,9 +1,7 @@
 {
     "navbar": {
         "home":    "Home",
-        "games":   "Games",
-        "gallery": "Gallery",
-        "members": "Members",
+        "about":   "About",
         "contact": "Contact"
     },
 

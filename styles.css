@@ -242,6 +242,10 @@ canvas {
 
 /* Página Membros -------------------- */
 /* Texto */
+#about-text {
+    max-width: 700px !important;
+}
+
 #member-text {
     background-color: rgba(60, 137, 215, 0.5);
     max-width: 700px !important;

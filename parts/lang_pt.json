@@ -1,10 +1,8 @@
 {
     "navbar": {
         "home":    "Home",
-        "games":   "Games",
-        "gallery": "Galeria",
-        "members": "Membros",
-        "contact": "Contato"
+        "about":   "Sobre",
+        "contact": "Contact"
     },
 
     "index": {
