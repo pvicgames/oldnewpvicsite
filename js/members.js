@@ -1,5 +1,5 @@
-const memberText  = $('#member-text');
-const memberIcon  = $('.member-icon');
+const memberText = $('#member-text');
+const memberIcon = $('.member-icon');
 const closeButton = $('#close-button');
 
 const textName = $('#text-name');
@@ -22,45 +22,45 @@ if (userPreferredLanguage == 'en') {
 }
 
 // Animação flip
-memberIcon.on('click', function() {
+memberIcon.on('click', function () {
     // Obter o ícone específico e executar animação flip
-    const clickedIcon = $(this); 
+    const clickedIcon = $(this);
 
     // Checar se não está clicando em espaço vazio.
     if (!clickedIcon.hasClass("no-anim")) {
         clickedIcon // Tocar animação de flip.
             .addClass('animate__animated animate__flip')
-            .one('animationend', function() {
+            .one('animationend', function () {
                 clickedIcon.removeClass('animate__animated animate__flipInX'); // Resetar animação quando acabar.
             });
 
         // Fade in do texto.
-        if (!text_displaying) { 
+        if (!text_displaying) {
             // Checar se esta no mobile
-            if ($(window).width() < 900) { 
+            if ($(window).width() < 900) {
                 memberText                  // fade in tradicional
-                .addClass('animate__animated animate__fadeIn') 
-                .one('animationend', function() {
-                    memberText.removeClass('animate__animated animate__fadeIn hidden'); 
-                });
+                    .addClass('animate__animated animate__fadeIn')
+                    .one('animationend', function () {
+                        memberText.removeClass('animate__animated animate__fadeIn hidden');
+                    });
 
                 window.location.href = '#member-text'
 
             } else {
                 memberText // Fade in da direita
-                .addClass('animate__animated animate__fadeInRight') 
-                .one('animationend', function() {
-                    memberText.removeClass('animate__animated animate__fadeInRight hidden');
-                });
+                    .addClass('animate__animated animate__fadeInRight')
+                    .one('animationend', function () {
+                        memberText.removeClass('animate__animated animate__fadeInRight hidden');
+                    });
             }
-            
+
             text_displaying = true
 
         } else { // Fade in quando já aberto
             memberText
-                .addClass('animate__animated animate__fadeIn') 
-                .one('animationend', function() {
-                    memberText.removeClass('animate__animated animate__fadeIn hidden'); 
+                .addClass('animate__animated animate__fadeIn')
+                .one('animationend', function () {
+                    memberText.removeClass('animate__animated animate__fadeIn hidden');
                 });
 
             window.location.href = '#member-text'
@@ -69,7 +69,7 @@ memberIcon.on('click', function() {
         // Mudar texto.
         $.getJSON(current_members_text, function (data, textStatus, jqXHR) {
             let path
-            
+
             switch (true) {
                 case clickedIcon.hasClass("casanova-icon"):
                     path = data.casanova;
@@ -95,7 +95,7 @@ memberIcon.on('click', function() {
                 case clickedIcon.hasClass("pablo-icon"):
                     path = data.pablo;
                     break;
-            
+
                 default:
                     path = data.default;
                     break;
@@ -112,7 +112,7 @@ memberIcon.on('click', function() {
             link1.attr("href", `${path.link1}`);
             link2.attr("href", `${path.link2}`);
             link3.attr("href", `${path.link3}`);
-            
+
             textName.text(path.name);
             textRole.text(path.role);
             textDesc.html(path.desc.replace(/\n/g, '<br>')); // Replace \n with <br> for line breaks
@@ -125,18 +125,18 @@ closeButton.on('click', function () {
     // Checar se esta no mobile
     if ($(window).width() < 1200) {
         memberText
-        .addClass('animate__animated animate__fadeOut hidden')
-        .one('animationend', function() {
-            memberText.removeClass('animate__animated animate__fadeOut');
-        });
+            .addClass('animate__animated animate__fadeOut hidden')
+            .one('animationend', function () {
+                memberText.removeClass('animate__animated animate__fadeOut');
+            });
 
         window.location.href = '#navbar-mobile'
     } else {
         memberText
-        .addClass('animate__animated animate__fadeOutRight hidden')
-        .one('animationend', function() {
-            memberText.removeClass('animate__animated animate__fadeOutRight');
-        });
+            .addClass('animate__animated animate__fadeOutRight hidden')
+            .one('animationend', function () {
+                memberText.removeClass('animate__animated animate__fadeOutRight');
+            });
     }
 
     text_displaying = false
